@@ -11,17 +11,17 @@ This repository gathers and organizes all publicly available Claude Skills, incl
 
 ## 📈 Overview
 
-**204 skills** across **13 categories**:
+**218 skills** across **13 categories**:
 
 | Category | Skills |
 |----------|--------|
-| 💻 Development & Code Tools | 66 |
+| 💻 Development & Code Tools | 72 |
 | 📣 Marketing & SEO | 20 |
-| 📝 Writing & Research | 17 |
-| 🤝 Collaboration & Project Management | 16 |
-| ⚙️ Utility & Automation | 23 |
+| 📝 Writing & Research | 20 |
+| 🤝 Collaboration & Project Management | 18 |
+| ⚙️ Utility & Automation | 25 |
 | 🔐 Security & Testing | 13 |
-| 📚 Learning & Knowledge | 13 |
+| 📚 Learning & Knowledge | 14 |
 | 🎨 Creative & Design | 9 |
 | 💼 Career & Job Search | 6 |
 | 🎥 Media & Content | 6 |
@@ -36,10 +36,9 @@ This repository gathers and organizes all publicly available Claude Skills, incl
 These are commonly requested, high-impact skills to start with:
 
 - `grill-me` - pressure-test plans and assumptions before execution
-- `caveman` - concise communication mode that cuts token usage
 - `grill-with-docs` - structured planning with `CONTEXT.md` and ADR updates
 - `tdd` - red/green/refactor workflow for safer implementation
-- `diagnose` - disciplined root-cause debugging loop
+- `diagnosing-bugs` - disciplined root-cause debugging loop
 - `handoff` - compact transfer notes between sessions/agents
 
 ---
@@ -116,16 +115,22 @@ Official Skills are created by Anthropic and auto-invoked when needed. You can a
 
 | Name | Description | Link |
 |------|-------------|------|
+| **code-review** | Two-axis review of changes since a fixed point — Standards (coding standards) and Spec (originating issue/PRD) — run in parallel sub-agents | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review) |
+| **codebase-design** | Shared vocabulary for designing deep modules — lots of behaviour behind a small interface at a clean seam | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/codebase-design) |
+| **diagnosing-bugs** | Disciplined diagnosis loop for hard bugs and performance regressions: reproduce, minimize, hypothesize, instrument, fix, and regression-test | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs) |
+| **domain-modeling** | Build and sharpen a project's domain model with ubiquitous language, glossary entries, and architectural decision records | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/domain-modeling) |
 | **grill-with-docs** | Grilling workflow that pressure-tests plans against domain language and updates CONTEXT.md and ADRs | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs) |
-| **tdd** | Test-driven development workflow using a red-green-refactor loop and vertical slices | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd) |
-| **diagnose** | Disciplined diagnosis loop for hard bugs and performance regressions: reproduce, minimize, hypothesize, instrument, fix, and regression-test | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnose) |
-| **to-prd** | Convert conversation context into a product requirements document and issue-ready artifact | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-prd) |
-| **to-issues** | Break plans, specs, or PRDs into independently actionable implementation issues | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-issues) |
-| **zoom-out** | Ask the agent for higher-level system context around unfamiliar code sections | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/zoom-out) |
-| **triage** | Triage work through a structured issue-state workflow with explicit roles | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/triage) |
-| **prototype** | Build throwaway prototypes for logic or UI exploration before production implementation | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype) |
+| **implement** | Implement a piece of work based on a spec or set of tickets, driving TDD internally per issue | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/implement) |
 | **improve-codebase-architecture** | Find deepening opportunities in a codebase using shared domain language and architectural decisions | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/improve-codebase-architecture) |
+| **prototype** | Build throwaway prototypes for logic or UI exploration before production implementation | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype) |
+| **research** | Delegate reading legwork to a background agent that investigates against primary sources and leaves a cited Markdown file | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/research) |
+| **resolving-merge-conflicts** | Resolve in-progress git merge/rebase conflicts by understanding both changes' intent and preserving it | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/resolving-merge-conflicts) |
 | **setup-matt-pocock-skills** | One-time repository setup for issue tracker, triage labels, and docs layout used by the engineering skill suite | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/setup-matt-pocock-skills) |
+| **tdd** | Test-driven development workflow using a red-green-refactor loop and vertical slices | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd) |
+| **to-spec** | Turn the current conversation into a spec and publish it to the project issue tracker — synthesis, no interview | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-spec) |
+| **to-tickets** | Break a plan, spec, or conversation into tracer-bullet tickets, each declaring its blocking edges | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-tickets) |
+| **triage** | Triage work through a structured issue-state workflow with explicit roles | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/triage) |
+| **wayfinder** | Plan huge multi-session work as a shared map of investigation tickets, resolving them one at a time until the route is clear | [Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/wayfinder) |
 | **interview-me** | Interactive requirements interview loop to uncover hidden assumptions before implementation | [Source](https://github.com/addyosmani/agent-skills/tree/main/skills/interview-me) |
 | **source-driven-development** | Ground implementation in primary sources and existing code reality before writing changes | [Source](https://github.com/addyosmani/agent-skills/tree/main/skills/source-driven-development) |
 | **performance-optimization** | Diagnose and improve runtime, render, and bundle performance with systematic profiling | [Source](https://github.com/addyosmani/agent-skills/tree/main/skills/performance-optimization) |
@@ -230,6 +235,9 @@ Official Skills are created by Anthropic and auto-invoked when needed. You can a
 | **claude-blog** | Blog content creation ecosystem with 12 commands for writing, rewriting, SEO, schema markup, content repurposing, and editorial calendars | [Source](https://github.com/AgriciDaniel/claude-blog) |
 | **claude-email** | AI-powered email management with inbox triage, composition using copywriting frameworks (PAS, AIDA, BAB), deliverability audits, and automation sequences | [Source](https://github.com/AgriciDaniel/claude-email) |
 | **autoresearch** | Autonomous research orchestration using a two-loop architecture managing the full lifecycle from literature survey to paper writing | [Source](https://github.com/Orchestra-Research/AI-research-SKILLs) |
+| **writing-fragments** | Mine raw fragments through relentless grilling — pure explore mode with no structure imposed | [Source](https://github.com/mattpocock/skills/tree/main/skills/in-progress/writing-fragments) |
+| **writing-beats** | Assemble raw material into a journey of beats, grounding each term before a beat leans on it | [Source](https://github.com/mattpocock/skills/tree/main/skills/in-progress/writing-beats) |
+| **writing-shape** | Shape raw material into an article, paragraph by paragraph, from a pile of notes or fragments | [Source](https://github.com/mattpocock/skills/tree/main/skills/in-progress/writing-shape) |
 
 ---
 
@@ -250,6 +258,7 @@ Official Skills are created by Anthropic and auto-invoked when needed. You can a
 | **think-deeply** | Prevents confirmatory answers by encouraging nuanced multi-perspective analysis for complex questions | [Source](https://github.com/brunoasm/my_claude_skills) |
 | **obsidian-markdown** | Structured markdown authoring and knowledge workflows optimized for Obsidian vaults | [Source](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-markdown) |
 | **json-canvas** | Work with Obsidian JSON Canvas for visual knowledge mapping and linking | [Source](https://github.com/kepano/obsidian-skills/tree/main/skills/json-canvas) |
+| **teach** | Learn a concept over multiple sessions using the current directory as a stateful workspace with glossary, missions, and resources | [Source](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) |
 
 ---
 
@@ -272,6 +281,8 @@ Official Skills are created by Anthropic and auto-invoked when needed. You can a
 |------|-------------|------|
 | **grill-me** | Structured questioning workflow to pressure-test plans and designs before execution | [Source](https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me) |
 | **handoff** | Generate concise handoff documentation so another agent can continue work seamlessly | [Source](https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff) |
+| **grilling** | Grill the user relentlessly about a plan or design — one question at a time with a recommended answer | [Source](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling) |
+| **loop-me** | Grill about specs for the workflows you want to build, using the current directory as a stateful workspace | [Source](https://github.com/mattpocock/skills/tree/main/skills/in-progress/loop-me) |
 | **Meeting Insights Analyzer** | Analyze meeting dynamics and communication patterns | [Source](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/meeting-insights-analyzer) |
 | **Notion Integration Skills** | Official Notion connectors for Claude | [Source](https://notiondevs.notion.site/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0) |
 | **commands** | Manage and automate recurring project commands | [Source](https://github.com/obra/superpowers) |
@@ -353,8 +364,7 @@ Official Skills are created by Anthropic and auto-invoked when needed. You can a
 
 | Name | Description | Link |
 |------|-------------|------|
-| **caveman** | Ultra-compressed communication mode to reduce token usage while preserving technical precision | [Source](https://github.com/mattpocock/skills/tree/main/skills/productivity/caveman) |
-| **write-a-skill** | Create new skills with strong structure, progressive disclosure, and reusable resources | [Source](https://github.com/mattpocock/skills/tree/main/skills/productivity/write-a-skill) |
+| **writing-great-skills** | Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable | [Source](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-great-skills) |
 | **git-guardrails-claude-code** | Install guardrails to block dangerous git commands before execution | [Source](https://github.com/mattpocock/skills/tree/main/skills/misc/git-guardrails-claude-code) |
 | **setup-pre-commit** | Configure Husky pre-commit hooks with lint-staged, formatting, and quality checks | [Source](https://github.com/mattpocock/skills/tree/main/skills/misc/setup-pre-commit) |
 | **file-organizer** | Clean up file structures, rename documents | [Source](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/file-organizer) |
@@ -376,6 +386,9 @@ Official Skills are created by Anthropic and auto-invoked when needed. You can a
 | **edit-article** | Assist with article editing and refinement workflows | [Source](https://github.com/mattpocock/skills/tree/main/skills/personal/edit-article) |
 | **obsidian-vault** | Work with and organize notes in an Obsidian vault | [Source](https://github.com/mattpocock/skills/tree/main/skills/personal/obsidian-vault) |
 | **obsidian-cli** | Use Obsidian CLI workflows to automate vault operations and content management | [Source](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-cli) |
+| **wizard** | Generate an interactive bash wizard that walks a human through a manual procedure — opening URLs, capturing values, confirming each step | [Source](https://github.com/mattpocock/skills/tree/main/skills/in-progress/wizard) |
+| **setup-ts-deep-modules** | Wire dependency-cruiser into a TypeScript repo so each package is a deep module with a small public surface | [Source](https://github.com/mattpocock/skills/tree/main/skills/in-progress/setup-ts-deep-modules) |
+| **claude-handoff** | Hand the current conversation off to a fresh background agent that picks up the work immediately | [Source](https://github.com/mattpocock/skills/tree/main/skills/in-progress/claude-handoff) |
 
 ---
 
